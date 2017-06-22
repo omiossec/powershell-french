@@ -1,18 +1,18 @@
 **Signer son code PowerShell**
 
-Que veut dire signer un script PowerShell ?  Certainement pas comme certains peuvent le croire pour encrypter le fichier. Cela c’est confondre ce qui arrive lorsque l’on envoie des données à travers une connexion TLS, comme lorsque l’on regarde son compte en banque sur Internet. Signer un script, un module ou en logiciel c’est indiquer et prouver son identité. Pour reprendre l’analogie avec une connexion web avec un site bancaire, dans la barre d’adresse je peux voir le nom de ma banque à côté d’un petit cadenas. 
+Que veut dire signer un script PowerShell ?  Certainement pas comme certains peuvent le croire pour encrypter le fichier. c’est confondre ce qui arrive lorsque l’on envoie des données à travers une connexion TLS, comme lorsque l’on regarde son compte en banque sur Internet. Signer un script, un module ou en logiciel c’est indiquer et prouver son identité. Pour reprendre l’analogie avec une connexion web avec un site bancaire, dans la barre d’adresse je peux voir le nom de ma banque à côté d’un petit cadenas. C'est la signature.
 
 Cela est possible car un tiers de confiance, l’entité d’où est issus le certificat, à valider l’identité du propriétaire du site. 
 
-Pour ce qui de nos scripts PowerShell. Signer équivaut à avoir un tiers de confiance qui valide l’identité de l’auteur. Ainsi le script peut être exécuter sans se poser de question. 
+Pour ce qui de nos scripts PowerShell. Signer équivaut à avoir un tiers de confiance qui valide l’identité de l’auteur. Ainsi le script peut être exécuter en toute confiance. 
 
 Ainsi un certificat auto signé, n’est pas une solution adaptée. Il n’y pas de tiers de confiance permettant la vérification de l’identité. 
 
-Un tiers de confiance peut être soit une autorité externe, autrement dit un certificat commercial soit une autorité interne accessible par tous les serveurs et postes de travail. 
+Un tiers de confiance peut être soit une autorité externe, autrement dit un certificat commercial (donc payant) soit une autorité interne accessible par tous les serveurs et postes de travail de l'entreprise. 
 
-Si vous avez une autorité de certification basée sur Microsoft. La procédure pour permettre la signature est assez simple. Il faut avoir un accès au à l’autorité de certification de l’entreprise. 
+Si vous avez une autorité de certification basée sur Microsoft, la procédure pour permettre créer une signature est assez simple. Il faut avoir un accès au à l’autorité de certification de l’entreprise. 
 
-Faire un clic droit sur "Certificate Template"
+Ouvrir la console de l'autorité de certification et faire un clic droit sur "Certificate Template"
 
 ![Console de l'autorité de certification](https://raw.githubusercontent.com/omiossec/powershell-french/master/powershellCodeSigning/img/image001.png)
 
@@ -32,7 +32,7 @@ Dans "Security", on peut permettre aux utilisateurs (ou un groupe d’utilisateu
 
 ![Onglet sécurité](https://raw.githubusercontent.com/omiossec/powershell-french/master/powershellCodeSigning/img/image004.jpg)
 
-D’autre possibilité sont offertes comme le changement dans la taille de la clé ou l’approbation par un tiers. 
+D’autre possibilité sont offertes comme le changement dans la taille de la clé ou l’approbation par un administrateur. 
 
 
 Fermer "Certificat Template console". 

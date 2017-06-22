@@ -14,23 +14,23 @@ Si vous avez une autorité de certification basée sur Microsoft. La procédure 
 
 Faire un clic droit sur "Certificate Template"
 
-![Console de l'autorité de certification](image001.png)
+![Console de l'autorité de certification](https://raw.githubusercontent.com/omiossec/powershell-french/master/powershellCodeSigning/img/image001.png)
 
 Cliquer sur "Manage" pour ouvrir le gestionnaire de template
 
 
-![gestionnaire de template](image002.png)
+![gestionnaire de template](https://raw.githubusercontent.com/omiossec/powershell-french/master/powershellCodeSigning/img/image002.jpg)
 
 Faire un clic droit sur "Code Signing" puis "Duplicate template".
 Dans la nouvelle fenêtre sélectionnez l’onglet General 
 
-![Onglet Général](image003.png)
+![Onglet Général](https://raw.githubusercontent.com/omiossec/powershell-french/master/powershellCodeSigning/img/image003.png)
 
 Entrer un nom, sélectionner une période de validé (1 an par défaut).
 
 Dans "Security", on peut permettre aux utilisateurs (ou un groupe d’utilisateurs) de s’inscrire
 
-![Onglet sécurité](image004.png)
+![Onglet sécurité](https://raw.githubusercontent.com/omiossec/powershell-french/master/powershellCodeSigning/img/image004.jpg)
 
 D’autre possibilité sont offertes comme le changement dans la taille de la clé ou l’approbation par un tiers. 
 
@@ -41,7 +41,7 @@ De retour dans la console de l’autorité de certification, faire un clic droit
 
 Sélectionner le template et cliquer sur OK 
 
-![Enable Certificate Template](image005.png)
+![Enable Certificate Template](https://raw.githubusercontent.com/omiossec/powershell-french/master/powershellCodeSigning/img/image005.png)
 
 Le template est disponible pour les utilisateurs. 
 
@@ -56,7 +56,8 @@ Get-Certificate -Template PowerShellSign
 # On peut lister les certificats 
 dir
 
-# On peut aussi sélectionner le certificat en utilisant son thumbprint et stocker un pointeur vers ce certificat dans une variable
+# On peut aussi sélectionner le certificat en utilisant son thumbprint 
+# et stocker un pointeur vers ce certificat dans une variable
 $cert =  dir Cert:\CurrentUser\My\7DEBE3605DE375F6F1051C9D6B39C4A76FBD349D
 
 Set-Location -Path c:\
